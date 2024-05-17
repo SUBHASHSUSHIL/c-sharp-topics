@@ -1,0 +1,38 @@
+//namespace_ThrowKeywordAndWaysOfException
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace namespace_ThrowKeywordAndWaysOfException_1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try       //hamara throw block
+            {
+                int account_balance = 50000;
+                int withdrawl_amount = 33000;
+
+                if (account_balance < withdrawl_amount)
+                {
+                    throw new Exception("Insufficient Balance..");
+                }
+                else
+                {
+                    account_balance = account_balance - withdrawl_amount;
+                    Console.WriteLine("Reamaining balance is: " + account_balance);
+                    Console.WriteLine("Transaction completed successfully..");
+                }
+            }
+            catch (Exception ex)      //hamara catch block
+            {
+                Console.WriteLine(ex.Message);
+            }
+            Console.ReadLine();
+        }
+    }        // complete exception
+}
