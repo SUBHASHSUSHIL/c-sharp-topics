@@ -1,0 +1,37 @@
+//File Handling
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace FileHandlingDemo1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string path = @"D:\data.txt";
+            string path2 = @"D:\data1.txt";
+            File.Copy(path, path2,true);  // true = data1 file all text remove in data file convert in copy data1 file 
+            Console.ReadLine();
+
+            //string path = @"D:\data.txt";  //verbatim literal
+            //if(File.Exists(path))
+            //{
+            //    Console.WriteLine("File Found..");
+            //    string data = File.ReadAllText(path);
+            //    Console.WriteLine(data);
+            //   // Console.WriteLine("Yes there is a file..");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("File Not Found..");
+            //    //Console.WriteLine("File Not Found..");
+            //}
+            //Console.ReadLine(); 
+        }
+    }
+}
