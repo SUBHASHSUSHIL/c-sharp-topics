@@ -1,0 +1,39 @@
+//MULTIPLE INHERITANCE
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MULTIPLE_INHERITANCE
+{
+    class Person
+    {
+        public void show1()
+        {
+            Console.WriteLine("This os a method of person class..!!");
+        }
+    }
+    interface Employee
+    {
+        void show2();
+    }
+    class Teacher : Person, Employee
+    {
+        public void show2()
+        {
+            Console.WriteLine("This is a method of Employee interface..!!");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Teacher t = new Teacher();
+            t.show1();
+            t.show2();
+            Console.ReadLine();
+        }
+    }
+}
