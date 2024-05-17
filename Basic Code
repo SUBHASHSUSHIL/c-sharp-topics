@@ -1,0 +1,40 @@
+//Basic Code
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Basic_Concept
+{
+    internal class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            //int a = 24;
+            //string b = "This is a visual studio.";
+            //float c = 45.6f;
+            //double e = 78.5d;
+            //int d = (int)12.5;   // Type Casting
+            //double f = 8969964451;
+            //Console.WriteLine(f);
+            //Console.WriteLine(d);
+            //Console.WriteLine(a);
+            //Console.WriteLine(b);
+            //Console.WriteLine(c);
+            //Console.WriteLine(e);
+            Console.WriteLine("Enter your name");
+            string Name = Console.ReadLine();
+            Console.WriteLine("Hey Hello" + Name);
+            Console.ReadLine();
+
+            Console.WriteLine("How many candies do you want?");
+            string can = Console.ReadLine();
+            Console.WriteLine("you will get 4 more candies: " + (Convert.ToInt32(can) + 4));
+
+            Console.ReadLine();
+            
+        }
+    }
+}
