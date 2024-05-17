@@ -1,0 +1,26 @@
+//Single_Cast_delegates
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Single_Cast_delegates
+{
+    internal class Program
+    {
+        public delegate void Calculation(int num1, int num2);
+        public static void Addition(int num1, int num2)
+        {
+            int result = num1 + num2;
+            Console.WriteLine("Addition result is: {0}", result);
+        }
+        static void Main(string[] args)
+        {
+            Calculation obj = new Calculation(Addition);
+            obj(50, 100);
+            Console.ReadLine();
+        }
+    }
+}
