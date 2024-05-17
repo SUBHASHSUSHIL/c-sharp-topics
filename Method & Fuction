@@ -1,0 +1,79 @@
+//Method & Fuction
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace method_or_function
+{
+    internal class Program
+    {
+        //public void show() //Declaring a method //non-static / instance method // non-parameterized method
+        //{
+        //    Console.WriteLine("Welcome to c# programing...");
+        //    Console.WriteLine("Hey bro wassup..");
+        //}
+
+        //public static void show1() //Declaring a method //static method
+        //{
+        //    Console.WriteLine("Welcome to c# programing...");
+        //    Console.WriteLine("Hey bro wassup..");
+        //}
+        //public static void Add(int num1, int num2) //parameterized method
+        //{
+        //    int result = num1 + num2;
+        //    Console.WriteLine("Addition result is: " + result);
+        //}
+        //public static void ShowName(string name="Unknown")
+        // {
+        //    Console.WriteLine("Your name is: " + name);
+        // }
+        // public void ShowAge(int age=18)
+        //{
+        //  Console.WriteLine("Your age is: " + age);
+        //}
+        //public static void Show_Name_Age(string name,int age)
+        //{
+        //    Console.WriteLine("Your name is: " + name);
+        //    Console.WriteLine("Your age is: " + age);
+        //}
+        public static int Add(int num1, int num2) //parameterized method
+        {
+            int result = num1 + num2;
+            return result;
+        }
+
+
+        static void Main(string[] args)
+        {
+            int a = Program.Add(20, 30);
+            int b = 20;
+            int c = a + b;
+            Console.WriteLine(c);
+           // Console.WriteLine(Program.Add(10, 20)); //Calling method
+           // Program.Show_Name_Age(age:22, name:"Sushil"); // named arguments
+           // Program.ShowAge();
+
+            //Program.ShowName("sushil");
+
+            //    Console.WriteLine("Enter first number: ");
+            //    int a = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("Enter second number: ");
+            //    int b = int.Parse(Console.ReadLine());
+
+
+            //    Program.Add(a, b, ); // arguments
+            //    //Program.Add(20, 40);
+            //Program.Add(50, 60);
+            //Program.Add(80, 60);
+            //Program.Add(90, 10);
+
+            //Program.show1(); // Calling a function
+            //Program p1 = new Program();
+            //p1.show(); // Call
+            Console.ReadLine();
+        }
+    }
+}
