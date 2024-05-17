@@ -1,0 +1,32 @@
+//Handaling Null ReferenceException
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HandalingNullReferenceException
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                string Name = null;
+                Console.WriteLine(Name.Length);
+
+            }
+            catch(NullReferenceException ex)
+            {
+                Console.WriteLine("string is null..");
+            }
+            Console.ReadLine();
+
+            //string name = "Sushil";
+            //Console.WriteLine(name.Length);
+            //Console.ReadLine();
+        }
+    }
+}
