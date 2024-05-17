@@ -1,0 +1,32 @@
+//File Stream
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace FileStreamDemo
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string path = @"D:\myFile.txt";  //verbatim literal
+            using (FileStream file = new FileStream(path, FileMode.Append,FileAccess.Write, FileShare.Read))
+            {
+                string data = "My name is Sushil..";
+                byte[] write_data = Encoding.UTF8.GetBytes(data);
+                file.Write(write_data, 0, write_data.Length);
+                //file.WriteByte(66);     // A
+                //file.WriteByte(68);
+                //file.WriteByte(69);
+
+                Console.WriteLine("File Truncated Successfully..");
+            }
+            //file.Close();
+            Console.ReadLine();
+        }
+    }
+}
