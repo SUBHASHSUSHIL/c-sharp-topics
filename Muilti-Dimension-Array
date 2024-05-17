@@ -1,0 +1,33 @@
+//Muilti-Dimension-Array
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Multi_dimensional_ractangular_arrays
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] my_array = new int[3, 4]
+            {
+                {12,23,15,45 },
+                {56,53,45,44 },
+                {88,96,56,32 }
+            };
+            for (int i = 0; i < my_array.GetLength(0); i++)
+            {
+                for (int j = 0; j < my_array.GetLength(1); j++)
+                {
+                    Console.WriteLine(my_array[i, j] + "");
+                }
+                Console.WriteLine();
+            }
+           // Console.WriteLine(my_array[2,2]);
+            Console.ReadLine();
+        }
+    }
+}
