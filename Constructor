@@ -1,0 +1,280 @@
+//There are Five types of Constructor.
+1.Default Constructor
+2.Parameterized Constructor
+3.Copy Constructor
+4.Static Constructor
+5.Private Constructor
+
+//1.Default Constructor:->
+                       A constructor with no parameters. It's provided automatically if no constructors are defined explicitly. It initializes the object with default values.
+//Ex:->
+
+using System;
+
+namespace ConstructorInCsharp
+{
+    public class Person
+    {
+        private string name;
+        private int age;
+
+        // Default Constructor
+        public Person()
+        {
+            name = "Unknown";
+            age = 0;
+        }
+
+        // Method to display person's information
+        public void DisplayInfo()
+        {
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Age: " + age);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Creating an instance of Person class using default constructor
+            Person person1 = new Person();
+
+            // Displaying information using the DisplayInfo method
+            Console.WriteLine("Person 1:");
+            person1.DisplayInfo();
+
+            // Creating another instance of Person class using default constructor
+            Person person2 = new Person();
+
+            // Displaying information for the second person
+            Console.WriteLine("\nPerson 2:");
+            person2.DisplayInfo();
+
+            Console.ReadLine();
+        }
+    }
+}
+
+//2.Parameterized Constructor:->
+                            A constructor with parameters. It allows you to initialize the object with custom values provided during instantiation.
+
+//Ex:->
+using System;
+
+namespace ConstructorInCsharp
+{
+    public class Person
+    {
+        private string name;
+        private int age;
+
+        // Parameterized Constructor
+        public Person(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+        // Method to display person's information
+        public void DisplayInfo()
+        {
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Age: " + age);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Creating an instance of Person class using parameterized constructor
+            Person person1 = new Person("Alice", 30);
+
+            // Displaying information using the DisplayInfo method
+            Console.WriteLine("Person 1:");
+            person1.DisplayInfo();
+
+            // Creating another instance of Person class using parameterized constructor
+            Person person2 = new Person("Bob", 25);
+
+            // Displaying information for the second person
+            Console.WriteLine("\nPerson 2:");
+            person2.DisplayInfo();
+
+            Console.ReadLine();
+        }
+    }
+}
+
+//3.Copy Constructor:->
+                    A constructor that initializes an object by copying the values from another object of the same type.
+Ex:->
+using System;
+
+namespace ConstructorInCsharp
+{
+    public class Person
+    {
+        private string name;
+        private int age;
+
+        // Copy Constructor
+        public Person(Person other)
+        {
+            // Copying values from another object
+            this.name = other.name;
+            this.age = other.age;
+        }
+
+        // Parameterized Constructor
+        public Person(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+        // Method to display person's information
+        public void DisplayInfo()
+        {
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Age: " + age);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Creating an instance of Person class using parameterized constructor
+            Person person1 = new Person("Alice", 30);
+
+            // Creating another instance of Person class using copy constructor
+            Person person2 = new Person(person1);
+
+            // Displaying information for the first person
+            Console.WriteLine("Person 1:");
+            person1.DisplayInfo();
+
+            // Displaying information for the second person (copied)
+            Console.WriteLine("\nPerson 2:");
+            person2.DisplayInfo();
+
+            Console.ReadLine();
+        }
+    }
+}
+
+//4.Static Constructor:->
+                         A special type of constructor used to initialize static data members or to perform any necessary initialization tasks before any instance of the class is created or any static members are accessed.
+//Ex:->
+using System;
+
+namespace ConstructorInCsharp
+{
+    public class MyClass
+    {
+        // Static field
+        private static int instanceCount;
+
+        // Static constructor
+        static MyClass()
+        {
+            Console.WriteLine("Static constructor called.");
+            instanceCount = 0;
+        }
+
+        // Constructor
+        public MyClass()
+        {
+            instanceCount++;
+        }
+
+        // Method to display instance count
+        public static void DisplayInstanceCount()
+        {
+            Console.WriteLine("Number of instances created: " + instanceCount);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Creating instances of MyClass
+            MyClass obj1 = new MyClass();
+            MyClass obj2 = new MyClass();
+
+            // Calling the static method to display instance count
+            MyClass.DisplayInstanceCount();
+
+            Console.ReadLine();
+        }
+    }
+}
+
+
+//5.Private Constructor:->
+                         A constructor declared with private access modifier. It is typically used in singleton patterns or when you want to prevent the instantiation of a class from outside the class itself.
+//Ex:->
+using System;
+
+namespace ConstructorInCsharp
+{
+    public class Singleton
+    {
+        private static Singleton instance = null;
+
+        // Static property to provide access to the instance
+        public static Singleton Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Singleton();
+                }
+                return instance;
+            }
+        }
+
+        // Private constructor to prevent direct instantiation
+        private Singleton()
+        {
+            Console.WriteLine("Singleton instance created.");
+        }
+
+        // Method to demonstrate functionality
+        public void DisplayMessage()
+        {
+            Console.WriteLine("Hello from the Singleton instance!");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Attempting to create instances of the Singleton class
+            Singleton s1 = Singleton.Instance;
+            Singleton s2 = Singleton.Instance;
+
+            // Demonstrate that both references point to the same instance
+            if (s1 == s2)
+            {
+                Console.WriteLine("Both s1 and s2 reference the same Singleton instance.");
+            }
+
+            // Call a method on the Singleton instance
+            s1.DisplayMessage();
+
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+
+
+
