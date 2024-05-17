@@ -1,0 +1,30 @@
+//Extension Method
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ExtensionMethodDemo
+{
+    internal class Program
+    {
+        public void Func1()
+        {
+            Console.WriteLine("This is First Function..");
+        }
+        public void Func2()
+        {
+            Console.WriteLine("This is Second Function..");
+        }
+
+        static void Main(string[] args)
+        {
+            Program p = new Program();
+            p.Func1();
+            p.Func2();
+            Console.ReadLine();
+        }
+    }
+}
