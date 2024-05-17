@@ -1,0 +1,24 @@
+//StringBuilder
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StringBuilderDemo1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendFormat("{0:N}", 25);
+            sb.Append("Sushil ");
+            sb.AppendLine("Thakur");
+            sb.Append("M.Sc");
+            Console.WriteLine(sb);
+            Console.ReadLine();
+        }
+    }
+}
