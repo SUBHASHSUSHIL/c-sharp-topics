@@ -1,0 +1,107 @@
+//Properties
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PROPERTIES
+{
+    class Student
+    {
+        //public string firstName { get; private set; }
+        //public string lastName { get; private set; }
+
+        public string firstName { get;  set; }
+        public string lastName { get;  set; }
+
+
+        public Student(string fName, string lName)
+        {
+            firstName = fName;
+            lastName = lName;
+        }
+        //private int _StdId;
+        //private string _Name;
+        //private string _Fname;
+        //private int _SubjectTotalMarks = 100;
+
+        //private int StdId
+        //{
+        //    set
+        //    {
+        //        this._StdId = value
+        //    }
+        //    //get
+        //    //{
+        //    //    return this._SubjectTotalMarks;
+        //    //}
+        //}
+
+        //private int StdId
+        //{
+        //    set
+        //    {
+        //        this._StdId = value;
+        //    }
+        //    get
+        //    {
+        //        return this._StdId;
+        //    }
+        //}
+        //public string Name
+        //{
+        //    set
+        //    {
+        //        this._Name = value;
+        //    }
+        //    get
+        //    {
+        //        return this._Name;
+        //    }
+        //}
+        //public string Fname
+        //{
+        //    set
+        //    {
+        //        if (string.IsNullOrEmpty(value))
+        //        {
+        //            Console.WriteLine("Please enter your Father name !!");
+        //        }
+        //        else
+        //        {
+        //            this._Fname = value;
+        //        }
+        //    }
+        //    get
+        //    {
+        //        return this._Fname;
+        //    }
+        //}
+        
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+                //Student s = new Student();
+                Student s = new Student("Sushil","Thakur");
+                s.firstName = "Sanjana";
+                s.lastName = "Thakur";
+                Console.WriteLine(s.firstName);
+                Console.WriteLine(s.lastName);
+                //Console.WriteLine(s.firstName + " " + s.lastName);
+               // Console.WriteLine(s.SubjectTotalMarks);
+
+                //s.StdId = 23;
+                //Console.WriteLine(s.StdId);
+                //s.Name = "Sushil Thakur";
+                //s.Fname = "Subhash Thakur";
+                //Console.WriteLine(s.StdId);
+                //Console.WriteLine(s.Name);
+                //Console.WriteLine(s.Fname);
+                Console.ReadLine();
+            }
+        }
+    }
+}
