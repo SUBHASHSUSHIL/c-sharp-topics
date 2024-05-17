@@ -1,0 +1,64 @@
+//Lambda Expression
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LambdaExpressionDemo
+{
+    public delegate int MyDelegate(int num1, int num2);
+
+    // public delegate void MyDelegate(int num);
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            MyDelegate obj = (a, b) => a + b;
+            Console.WriteLine(obj.Invoke(10,20));
+            // MyDelegate obj1 = (a) => a * a * a;
+
+           // Console.WriteLine(obj1.Invoke(5));
+
+            //MyDelegate obj = (a) =>
+          //  {
+            //    a += 5;
+              //  Console.WriteLine(a);
+            //};
+            //obj.Invoke(5);
+            Console.ReadLine();
+        }
+    }
+}
+Demo
+{
+    public delegate int MyDelegate(int num1, int num2);
+
+    // public delegate void MyDelegate(int num);
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            MyDelegate obj = (a, b) => a + b;
+            Console.WriteLine(obj.Invoke(10,20));
+            // MyDelegate obj1 = (a) => a * a * a;
+
+           // Console.WriteLine(obj1.Invoke(5));
+
+            //MyDelegate obj = (a) =>
+          //  {
+            //    a += 5;
+              //  Console.WriteLine(a);
+            //};
+            //obj.Invoke(5);
+            Console.ReadLine();
+        }
+    }
+}
