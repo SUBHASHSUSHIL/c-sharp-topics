@@ -1,0 +1,39 @@
+//SERIALIZATION
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Serialization_Demo
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //SERIALIZATION
+
+            //string path = @"D:\Sushil new\Sample.PNG";
+            //Employee emp = new Employee(896, "Sushil");
+            //FileStream stream = new FileStream(path, FileMode.OpenOrCreate);
+            //BinaryFormatter bf = new BinaryFormatter();
+            //bf.Serialize(stream, emp);
+            //stream.Close();
+            //Console.WriteLine("File Created Successfully -> " + path);
+            //Console.ReadLine();
+
+            // DE-SERIALIZATION
+            string path = @"D:\Sushil new\Sample.txt";
+            FileStream stream = new FileStream(path, FileMode.OpenOrCreate);
+            BinaryFormatter bf = new BinaryFormatter();
+            Employee emp = (Employee)bf.Deserialize(stream);
+            Console.WriteLine("Employee Id: " + emp.Id);
+            Console.WriteLine("Employee Id: " + emp.Name);
+            stream.Close();
+            Console.ReadLine();
+        }
+    }
+}
