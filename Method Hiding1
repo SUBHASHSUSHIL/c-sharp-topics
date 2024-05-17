@@ -1,0 +1,45 @@
+//Method Hiding
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace METHOD_HIDING2
+{
+    class employee
+    {
+        public string firstName;
+        public string lastName;
+        public void printfullName()
+        {
+            Console.WriteLine(firstName + " " + lastName);
+        }
+    }
+    class PartTimeEmployee : employee
+    {
+        public new void printfullName()
+        {
+            Console.WriteLine(firstName + " " + lastName + " PTE");
+        }
+    }
+    class FullTimeEmployee : employee
+    {
+        public new void printfullName()
+        {
+            Console.WriteLine(firstName + " " + lastName + " FTE");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            PartTimeEmployee PTE = new PartTimeEmployee();
+            PTE.firstName = "Sushil";
+            PTE.lastName = "Thakur";
+             PTE.printfullName();
+            Console.ReadLine();
+        }
+    }
+}
