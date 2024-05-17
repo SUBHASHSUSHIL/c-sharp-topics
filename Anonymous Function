@@ -1,0 +1,40 @@
+//Anonymous Function
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AnonymousFunctionDemo
+{
+    //public delegate int MyDelegate(int num);
+
+    public delegate void MyDelegate(int num);
+    internal class Program
+    {
+        public static void MyMethod(MyDelegate del, int a)
+        {
+            a += 10;
+            del.Invoke(a);
+           // Console.WriteLine(a);
+        }
+        static void Main(string[] args)
+        {
+            Program.MyMethod(delegate (int b) { b += 10; Console.WriteLine(b); }, 5);
+            //MyDelegate obj = new MyDelegate(Program.MyMethod);
+            //MyDelegate obj = delegate (int a)
+            //{
+            //    a += 10;
+            //    return a;
+            //    //Console.WriteLine(a);
+            //};
+           // Console.WriteLine(obj.Invoke(5));
+            //obj(5);  //both two obj any one use
+           // obj.Invoke(5);
+            //Console.ReadLine();
+
+            //obj.Invoke(5);
+            Console.ReadLine();
+        }
+    }
+}
