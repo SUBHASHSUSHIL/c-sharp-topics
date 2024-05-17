@@ -1,0 +1,39 @@
+//StringWriter
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace StreamWriterDemo
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string path = @"D:\myFile.txt";
+            using (FileStream file = new FileStream(path, FileMode.Append, FileAccess.Write))
+            {
+                using (StreamWriter writer = new StreamWriter(file,Encoding.UTF8))
+                {
+                    int[] arr = { 11, 22, 33, 44, 55 };
+                    char[] arr2 = { 'A', 'B', 'C', 'D', 'E' };
+                    foreach (var item in arr2)
+                    {
+                        writer.Write(item + " ");
+                    }
+                    //writer.Write("Statement No 1");
+                    //writer.WriteLine("Statement No 2");
+                    //writer.Write("I,m Sushil From BIHAR");
+                    //writer.Write("Hey Mr.How are you");
+                }
+               Console.WriteLine("File Created..");
+                
+            }
+            Console.ReadLine();
+            
+        }
+    }
+}
