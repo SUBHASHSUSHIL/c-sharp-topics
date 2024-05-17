@@ -1,0 +1,63 @@
+//VALUE_TYPE_REFERENCE_TYPE
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace VALUE_TYPE_REFERENCE_TYPE
+{
+
+    class Employee
+    {
+        public int Salary;
+        public int Age;
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee e = new Employee();
+            e.Salary = 5000;
+            e.Age = 23;
+
+            Employee e1 = e;
+            Employee e2 = e;
+
+            e.Age = 25;
+            Console.WriteLine(e.Age);
+            Console.WriteLine(e1.Age);
+            Console.WriteLine(e2.Age);
+            Console.ReadLine();
+        }
+    }
+}
+//namespace VALUE_TYPE_REFERENCE_TYPE
+//{
+
+//    struct Employee
+//    {
+//        public int Salary;
+//        public int Age;
+//    }
+//    internal class Program
+//    { 
+//        static void Main(string[] args)
+//        {
+//            Employee e = new Employee();
+//            e.Salary = 5000;
+//            e.Age = 23;
+
+//            Employee e1 = e;
+//            Employee e2 = e;
+
+//            e.Age = 25;
+//            Console.WriteLine(e.Age);
+//            Console.WriteLine(e1.Age);
+//            Console.WriteLine(e2.Age);
+//            Console.ReadLine();
+//        }
+//    }
+//}
+
+
