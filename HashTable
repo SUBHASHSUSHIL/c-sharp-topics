@@ -1,0 +1,44 @@
+//HashTable
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HashTableDemo
+{
+    //Employee create form //create Application 
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Hashtable ht = new Hashtable();
+            ht.Add("Id", 1123);
+            ht.Add("Name", "Sushil");
+            ht.Add("Salary", 25000.00);
+            ht.Add("Designation", "Manager");
+            ht.Add("IsMarried", false);
+
+            Console.WriteLine(ht["Designation"]);
+            Console.WriteLine(ht["Id"]);
+
+            Console.ReadLine();
+
+            //next example
+
+            //Hashtable ht = new Hashtable()
+            //{
+            //    {"Id",1123 },
+            //    {"Name","Sushil" },
+            //    {"Age",22 }
+            //};
+            //Console.WriteLine(ht["Age"]);
+            //Console.ReadLine();
+
+           
+        }
+    }
+}
