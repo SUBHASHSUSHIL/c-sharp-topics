@@ -1,0 +1,37 @@
+//Exception
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ExceptionDemo
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter first number: ");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter second number: ");
+            int num2 = int.Parse(Console.ReadLine());
+            try   // crashes in program = 10/0 (EXCEPTION FORMULA)
+            {
+                int result = num1 / num2;
+                Console.WriteLine("Devision result is: " + result);
+            }
+            catch(DivideByZeroException ex)
+            {
+                Console.WriteLine("You cannot divide a number by zero.. ");
+                Console.WriteLine(ex.Message);
+            }
+            
+
+            Console.WriteLine("Remaining statement 1");
+            Console.WriteLine("Remaining statement 2");
+            Console.WriteLine("Remaining statement 3");
+            Console.ReadLine();
+        }
+    }
+}
