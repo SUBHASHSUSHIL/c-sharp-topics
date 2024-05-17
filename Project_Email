@@ -1,0 +1,89 @@
+//project_email
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project_email
+{
+    internal class Program
+    {
+        public void Sig_in()
+        {
+            string Name, Pass;
+
+            Console.WriteLine("Enter the User Name:");
+            Name = Console.ReadLine();
+            Console.WriteLine("Enter your password:");
+            Pass = Console.ReadLine();
+        }
+
+        public void Forget_email()
+        {
+            string Email;
+            long Mobile;
+
+            Console.WriteLine("Enter your Email Id:");
+            Email = Console.ReadLine();
+            Console.WriteLine("Enter your Mobile Number:");
+            Mobile = Convert.ToInt64(Console.ReadLine());
+        }
+
+        public void Create_Account()
+        {
+            string FirstName, LastName, Email;
+            long Mobile, DOB;
+
+            Console.WriteLine("Enter your First Name:");
+            FirstName = Console.ReadLine();
+            Console.WriteLine("Enter your Last Name:");
+            LastName = Console.ReadLine();
+            Console.WriteLine(" Enter your Date of Birth:");
+            DOB = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter your another email:");
+            Email = Console.ReadLine();
+            Console.WriteLine("Enter your mobile number:");
+            Mobile=Convert.ToInt64(Console.ReadLine());
+        }
+
+        
+
+        public void Gmail()
+        {
+            int press;
+
+            Console.WriteLine("-----------WELCOME To Gmail--------------\n Sig_in \n Forget_email \n Create_Account ");
+            Console.WriteLine("Press Any Option.");
+            press = Convert.ToInt32(Console.ReadLine());
+
+            switch(press)
+            {
+            case 1:
+                    Sig_in();
+            break;
+
+            case 2:
+                    Forget_email();
+            break;
+
+            case 3:
+                    Create_Account();
+            break;
+
+            default:
+                    Console.WriteLine("Choose a valid option");
+            break;
+
+
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            program.Gmail();
+        }
+    }
+}
