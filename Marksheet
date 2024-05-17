@@ -1,0 +1,39 @@
+//Marksheet
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Marksheet
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter your name");
+            string name = Console.ReadLine();
+            Console.WriteLine("Enter your Roll no");
+            string roll = Console.ReadLine();
+            Console.WriteLine("Enter your Class");
+            string standard = Console.ReadLine();
+            Console.WriteLine("Enter Sanskrit Marks");
+            int sanskrit = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Zoology Marks");
+            int zoology = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Math Marks");
+            int math = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter English Marks");
+            int english = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Hindi Marks");
+            int hindi = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Drowing Marks");
+            int drowing = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Social-Science Marks");
+            int science = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Biology Marks");
+            int biology = int.Parse(Console.ReadLine());
+        }
+    }
+}
