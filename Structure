@@ -1,0 +1,55 @@
+//Structure
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StructureDemo
+{
+    internal struct Program
+    {
+        
+        public void func1()
+        {
+            Console.WriteLine("This is my new function..");
+        }
+
+        static void Main(string[] args)
+        {
+            Program p = new Program();
+            p.func1();
+            Console.ReadLine();
+        }
+
+        interface myInterface
+        {
+            void Show();
+        }
+
+        struct myStruct : myInterface
+        {
+            public void Show()
+            {
+                throw new NotImplementedException();
+            }
+        }
+    }
+    //struct Program
+    //{
+    //    int a;
+    //    public void func1()
+    //    {
+    //        Console.WriteLine("This is my new function.." + a);
+    //    }
+
+    //    static void Main(string[] args)
+    //    {
+    //        Program p;
+    //        p.a = 10;
+    //        p.func1();
+    //        Console.ReadLine();
+    //    }
+    //}
+}
