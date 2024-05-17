@@ -1,0 +1,35 @@
+//Handling Formate Exception
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HandlingFormateException
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a number: ");
+            string number = Console.ReadLine();
+
+            try
+            {
+                int num = int.Parse(number);
+                Console.WriteLine("Number is: " + num);
+
+            }
+            catch(FormatException ex)
+            {
+                Console.WriteLine("string format is invalid...");
+                Console.WriteLine(ex.Message);
+            }
+
+
+            Console.ReadLine();
+
+        }
+    }
+}
