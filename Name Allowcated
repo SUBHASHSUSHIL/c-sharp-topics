@@ -1,0 +1,23 @@
+//Name Allowcated
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace NameAllocate
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter the first name");
+            string fname = Console.ReadLine();
+            Console.WriteLine("enter the last name");
+            string lname = Console.ReadLine();
+            Console.WriteLine("your name is: {0} {1} " , fname,lname);
+            Console.ReadLine();
+        }
+    }
+}
