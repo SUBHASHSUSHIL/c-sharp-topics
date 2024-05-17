@@ -1,0 +1,106 @@
+//List Generic Collection
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ListGenericCollection
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee emp1 = new Employee()
+            {
+                name = "Sushil",
+                age = 12,
+                designation = "Manager"
+            };
+
+            Employee emp2 = new Employee()
+            {
+                name = "Sandeep",
+                age = 27,
+                designation = "Assistant"
+            };
+            Employee emp3 = new Employee()
+            {
+                name = "Subhash",
+                age = 50,
+                designation = "Manager"
+            };
+            Employee emp4 = new Employee()
+            {
+                name = "Pardip",
+                age = 33,
+                designation = "Operator"
+            };
+
+
+
+            List<Employee> EMPList = new List<Employee>();
+            EMPList.Add(emp1);
+            EMPList.Add(emp2);
+            EMPList.Add(emp3);
+            EMPList.Add(emp4);
+
+            foreach (Employee emp in EMPList)
+            {
+                Console.WriteLine("Employee Name is: {0} Age is: {1} Designation is: {2}", emp.name, emp.age, emp.designation);
+            }
+
+            EMPList.RemoveAll(emp => emp.age > 20);
+            Console.WriteLine("-----------");
+
+            foreach (Employee emp in EMPList)
+            {
+                Console.WriteLine("Employee Name is: {0} Age is: {1} Designation is: {2}", emp.name, emp.age, emp.designation);
+            }
+
+            //List<int> myNumbers = new List<int>();
+            //myNumbers.Add(11);
+            //myNumbers.Add(22);
+            //myNumbers.Add(33);
+            //myNumbers.Add(55);
+            //myNumbers.Add(44);
+            //myNumbers.Add(55);
+
+            //foreach (int item in myNumbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            // mynumbers.Short();
+            //myNumbers.AddRange(myNumbers); // Collection of data
+            //myNumbers.InsertRange(2, myNumbers);
+            //myNumbers.Insert(1, 10); // index number top add number
+            // myNumbers.Remove(33); // Single one digit remove
+            // myNumbers.RemoveAt(2);
+            // myNumbers.RemoveRange(2, 3); // scaled down 2/3 digits remove
+
+            // Console.WriteLine("-----------");
+            // foreach (int item in myNumbers)
+            // {
+            //     Console.WriteLine(item);
+            // }
+
+            // List<string> names = new List<string>();
+            // names.Add("Pardip");
+            // names.Add("Bipin");
+            // names.Add("Sanjay");
+            // names.Add("Suhail");
+            // names.Add("Pankaj");
+
+
+            // //foreach (string item in names)
+            // //{
+            // //    Console.WriteLine(item);
+            // //}
+            //// Console.WriteLine(myNumbers.Capacity);
+
+            Console.ReadLine();
+        }
+    }
+}
