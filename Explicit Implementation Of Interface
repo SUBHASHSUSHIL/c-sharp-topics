@@ -1,0 +1,47 @@
+//EXPLICIT IMPLEMENTATION OF INTERFACE
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EXPLICIT_IMPLEMENTATION_OF_INTERFACE
+{
+    interface i1
+    {
+        void show();
+    }
+    interface i2
+    {
+        void show();
+    }
+    class MyClass : i1, i2
+    {
+        void i1.show()
+        {
+            Console.WriteLine("This is a method of i1 interface !!");
+        }
+
+        void i2.show()
+        {
+            Console.WriteLine("This is a method of i2 interface !!");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+          //  MyClass obj = new MyClass();
+            //((i1)obj).show();
+            //((i2)obj).show();
+
+            i1 obj1 = new MyClass();
+            obj1.show();
+            i2 obj2 = new MyClass();
+            obj2.show();
+
+            Console.ReadLine();
+        }
+    }
+}
