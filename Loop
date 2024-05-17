@@ -1,0 +1,51 @@
+//Loop
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Loops_Csharp
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 1;
+
+            do
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+            while (i < 0);
+            Console.WriteLine("For loop terminates...");
+            //int number = 5;
+            //int i = 1;
+
+
+            //while(i <= 10)
+            //{
+            //    Console.WriteLine(number + " X " + i + " = " + number*i);
+            //   // Console.WriteLine(i);
+            //    i++;
+            //}
+            //Console.WriteLine("For loop terminates...");
+
+           //for(int i = 10; i > 0; i--)
+            //{
+              //  Console.WriteLine(i);
+            //}
+
+            //Console.WriteLine("Enter a number:  ");
+            //int number = int.Parse(Console.ReadLine());
+
+            //for(int i 1; i <= 10; i++) // jo loop ke andar variable bante hai o counter variable kahlate hai INTERVIEW QUESTION.
+            //  Console.WriteLine(number + " X " + i + " = " + number)
+            //}
+            //Console.WriteLine("For loop terminates...");
+            Console.ReadLine();
+        }
+    }
+}
