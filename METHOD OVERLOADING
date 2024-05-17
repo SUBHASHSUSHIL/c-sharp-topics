@@ -1,0 +1,48 @@
+//Method Overloading
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace METHOD_OVERLOADING
+{
+    internal class Program
+    {
+        public void Add()
+        {
+            int a = 30;
+            int b = 40;
+            int c = a + b;
+            Console.WriteLine(c);
+        }
+        public void Add(int a, int b)
+        {
+
+            int c = a + b;
+            Console.WriteLine(c);
+        }
+        public void Add(string a, string b)
+        {
+
+            string c = a + " " + b;
+            Console.WriteLine(c);
+        }
+        public void Add(float a, float b)
+        {
+
+            float c = a + b;
+            Console.WriteLine(c);
+        }
+        static void Main(string[] args)
+        {
+            Program P = new Program();
+            P.Add();
+            P.Add(2.5f, 1.5f);
+            P.Add(10, 5);
+            P.Add("Sushil", "Thakur");
+            Console.ReadLine();
+        }
+    }
+}
