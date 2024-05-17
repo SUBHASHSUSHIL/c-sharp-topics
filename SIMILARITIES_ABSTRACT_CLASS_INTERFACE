@@ -1,0 +1,42 @@
+//SIMILARITIES_ABSTRACT_CLASS_INTERFACE
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SIMILARITIES_ABSTRACT_CLASS_INTERFACE
+{
+    interface myInterface
+    {
+        void print();
+    }
+
+    abstract class myClass
+    {
+        public abstract void print1();
+    }
+    class Example : myClass, myInterface
+    {
+        public void print()
+        {
+            Console.WriteLine("This is a method interface !!");
+        }
+
+        public override void print1()
+        {
+            Console.WriteLine("This is a method Abstract Class !!");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Example obj = new Example();
+            obj.print();
+            obj.print1();
+            Console.ReadLine();
+        }
+    }
+}
