@@ -1,0 +1,36 @@
+//Method Overriding
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace METHOD_OVERRIDING
+{
+    class parent
+    {
+        public virtual void print()
+        {
+            Console.WriteLine("this is method of parent class");
+        }
+    }
+    class child : parent
+    {
+        public override void print()
+        {
+            Console.WriteLine("this is method of child class");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            parent p = new child();
+            p.print();
+
+           
+            Console.ReadLine();
+        }
+    }
+}
