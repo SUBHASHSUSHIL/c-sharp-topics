@@ -1,0 +1,48 @@
+//Try With Multiple Catch Blocks
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TryWithMultipleCatchBlocks
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try                      //one time one catch block open
+            {
+
+                int a = 10; //catch 1
+                int b = 0;
+                int c = a / b;
+
+                string f = null;  //catch 2
+                Console.WriteLine(f.Length);
+                int[] arr = new int[3];  //catch 3
+                arr[0] = 11;
+                arr[1] = 22;
+                arr[2] = 33;
+                arr[3] = 44;
+
+            }
+            catch(DivideByZeroException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine(ex.Message);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+            }
+            Console.ReadLine();
+        }
+    }
+}
