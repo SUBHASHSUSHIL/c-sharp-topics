@@ -1,0 +1,26 @@
+//Single_dimensional_arrays
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Single_dimensional_arrays
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = new int[3];
+            arr[0] = 11;
+            arr[1] = 22;
+            arr[2] = 33;
+            
+
+            Console.WriteLine(arr[0]);
+
+            Console.ReadLine();
+        }
+    }
+}
