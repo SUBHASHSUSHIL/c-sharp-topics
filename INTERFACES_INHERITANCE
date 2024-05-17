@@ -1,0 +1,52 @@
+//Interfaces Inheritance
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace INTERFACES_INHERITANCE
+{
+    interface i1
+    {
+        void print();
+    }
+    interface i2
+    {
+        void print1();
+
+    }
+    interface i3 : i1, i2
+    {
+        void print2();
+
+    }
+    internal class Program : i3
+    {
+        public void print()
+        {
+            Console.WriteLine("This is a method of Interface 1 !!");
+        }
+        public void print1()
+        {
+            Console.WriteLine("This is a method of Interface 2 !!");
+        }
+
+        public void print2()
+        {
+            Console.WriteLine("This is a method of Interface 3 !!");
+        }
+        static void Main(string[] args)
+        {
+            //Program P = new Program();
+            //P.print();
+            //P.print1();
+            //P.print2();
+//ya
+            i3 myinterface = new Program();
+            myinterface.print1();
+            Console.ReadLine();
+        }
+    }
+}
