@@ -1,0 +1,55 @@
+//There are four types of oops.
+1.Abstraction.
+2.Encapsulation
+3.Inheritance
+4.Polymorphism
+
+//1.ABSTRACTION:->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Abstraction
+{
+    class Employee
+    {
+        public int EmpId;
+        public string EmpName;
+        public double GrossPay; // 25000 // house rent ---- 5000, convence allowance - 4000
+        double TaxDeduction = 0.1; // 10%
+        double netSalary;
+
+        public Employee(int Eid, string Ename, double EgrossPay)
+        {
+            this.EmpId = Eid;
+            this.EmpName = Ename;
+            this.GrossPay = EgrossPay;
+        }
+
+        void CalculateSalary()
+        {
+            if(GrossPay >= 30000)
+            {
+                netSalary = GrossPay - (TaxDeduction * GrossPay);
+                Console.WriteLine("Your Salary is: {0}", GrossPay);
+            }
+        }
+        public void ShowEmployeeDetails()
+        {
+            Console.WriteLine("Employee Id is: {0}",this.EmpId);
+            Console.WriteLine("Employee Name is: {0}", this.EmpName);
+            this.CalculateSalary();
+        }
+    }
+    internal class program
+    { 
+        static void Main(string[] args)
+        {
+            Employee Thakur = new Employee(333,"Sushil Thakur",40000);
+            Thakur.ShowEmployeeDetails();
+            Console.ReadLine();
+        }
+    }
+}
