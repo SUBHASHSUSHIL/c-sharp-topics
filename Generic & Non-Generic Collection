@@ -1,0 +1,42 @@
+//Generic & Non-Generic Collection
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DifferenceBetweenNonGenericAndGeneric
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> myNumbers = new List<int>(); //Generic collection
+            myNumbers.Add(12);
+            myNumbers.Add(13);
+            myNumbers.Add(14);
+            Console.WriteLine(myNumbers.Capacity);
+            myNumbers.Add(44);
+            myNumbers.Add(55);
+            Console.WriteLine(myNumbers.Capacity);
+
+
+            //ArrayList al = new ArrayList(3);
+            //al.Add("Sushil");
+            //al.Add(22);
+            //al.Add(5.10);
+            //Console.WriteLine(al.Capacity);
+            //al.Add('a');
+            //al.Add("Qureshi");
+            //Console.WriteLine(al.Capacity);
+
+
+            //int[] arr = new int[3];
+            //arr[0] = 11;
+            //arr[1] = 22;
+            //arr[2] = 33;
+            Console.ReadLine();
+        }
+    }
+}
