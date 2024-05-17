@@ -1,0 +1,40 @@
+//NGQueue
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace NGQueueDemo_NG_non_generic
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue myQueue = new Queue();
+            myQueue.Enqueue("Thakur");
+            myQueue.Enqueue(null);
+            myQueue.Enqueue(null);
+            myQueue.Enqueue("Thakur");
+            myQueue.Enqueue('A');
+            myQueue.Enqueue(25);
+            myQueue.Enqueue(true);
+            myQueue.Enqueue(5.9);
+
+           // Console.WriteLine(myQueue.Count);
+            foreach (object item in myQueue)
+            {
+                Console.WriteLine(item);
+            }
+            myQueue.Dequeue();
+            Console.WriteLine("----------------");
+            foreach (object item in myQueue)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+        }
+    }
+}
