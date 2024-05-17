@@ -1,0 +1,193 @@
+//Static_And_Instance_Members
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Static_And_Instance_Members
+{
+    //static method
+    class Student
+    {
+        public int rollNo;
+        public string firstName;
+        public string lastName;
+        public int standard;
+        public static string schoolName = "ABC School";
+        public static int fees = 4000;
+
+        public void printFullName()
+        {
+            string fullname = this.firstName + " " + this.lastName;
+            Console.WriteLine("Your full name is {0}", fullname);
+            Console.WriteLine(schoolName);
+        }
+
+        public static int getFees()
+        {
+            return fees;
+        }
+        public static int getFeesAnnualIncrement(int fee)
+        {
+            return fee / 10;
+        }
+    }
+
+
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Student Sushil = new Student();
+            Sushil.rollNo = 23;
+            Sushil.firstName = "Sushil";
+            Sushil.lastName = "Thakur";
+            Sushil.standard = 12;
+
+            Student Sanjana = new Student();
+            Sanjana.rollNo = 28;
+            Sanjana.firstName = "Sanjana";
+            Sanjana.lastName = "Thakur";
+            Sanjana.standard = 13;
+
+
+            Console.WriteLine(Sushil.rollNo);
+            Console.WriteLine(Sushil.firstName);
+            Console.WriteLine(Sushil.lastName);
+            Console.WriteLine(Sushil.standard);
+            Sushil.printFullName();
+            Console.WriteLine(Student.schoolName);
+            Console.WriteLine(Student.getFees());
+
+
+            Console.WriteLine("----------------");
+            Console.WriteLine(Sanjana.rollNo);
+            Console.WriteLine(Sanjana.firstName);
+            Console.WriteLine(Sanjana.lastName);
+            Console.WriteLine(Sanjana.standard);
+            Sanjana.printFullName();
+            Console.WriteLine(Student.schoolName);
+            Console.WriteLine(Student.getFees());
+            Console.WriteLine(Student.getFeesAnnualIncrement(3000);
+
+
+            // Console.WriteLine(Sushil.rollNo + " " + Sanjana.rollNo);
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+    //static Member (variable)
+
+//    class Student
+//    {
+//        public int rollNo;
+//        public string firstName;
+//        public string lastName;
+//        public int standard;
+//        public static string schoolName = "ABC School";
+
+//        public void printFullName()
+//        {
+//            string fullname = this.firstName + " " + this.lastName;
+//            Console.WriteLine("Your full name is {0}", fullname);
+//        }
+//    }
+
+
+
+//    internal class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            Student Sushil = new Student();
+//            Sushil.rollNo = 23;
+//            Sushil.firstName = "Sushil";
+//            Sushil.lastName = "Thakur";
+//            Sushil.standard = 12;
+
+//            Student Sanjana = new Student();
+//            Sanjana.rollNo = 28;
+//            Sanjana.firstName = "Sanjana";
+//            Sanjana.lastName = "Thakur";
+//            Sanjana.standard = 13;
+
+
+//            Console.WriteLine(Sushil.rollNo);
+//            Console.WriteLine(Sushil.firstName);
+//            Console.WriteLine(Sushil.lastName);
+//            Console.WriteLine(Sushil.standard);
+//            Sushil.printFullName();
+//            Console.WriteLine(Student.schoolName);
+
+//            Console.WriteLine("----------------");
+//            Console.WriteLine(Sanjana.rollNo);
+//            Console.WriteLine(Sanjana.firstName);
+//            Console.WriteLine(Sanjana.lastName);
+//            Console.WriteLine(Sanjana.standard);
+//            Sanjana.printFullName();
+//            Console.WriteLine(Student.schoolName);
+
+
+//            // Console.WriteLine(Sushil.rollNo + " " + Sanjana.rollNo);
+//            Console.ReadLine();
+//        }
+//    }
+//}
+
+     //Instance Members
+
+//    class Student
+//    {
+//        public int rollNo;
+//        public string firstName;
+//        public string lastName;
+//        public int standard;
+
+//        public void printFullName()
+//        {
+//            string fullname = this.firstName + " " + this.lastName;
+//            Console.WriteLine("Your full name is {0}", fullname);
+//        }
+//    }
+
+
+
+//    internal class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            Student Sushil = new Student();
+//            Sushil.rollNo = 23;
+//            Sushil.firstName = "Sushil";
+//            Sushil.lastName = "Thakur";
+//            Sushil.standard = 12;
+
+//            Student Sanjana = new Student();
+//            Sanjana.rollNo = 28;
+//            Sanjana.firstName = "Sanjana";
+//            Sanjana.lastName = "Thakur";
+//            Sanjana.standard = 13;
+
+//            Console.WriteLine(Sushil.rollNo);
+//            Console.WriteLine(Sushil.firstName);
+//            Console.WriteLine(Sushil.lastName);
+//            Console.WriteLine(Sushil.standard);
+//            Sushil.printFullName();
+//            Console.WriteLine("----------------");
+//            Console.WriteLine(Sanjana.rollNo);
+//            Console.WriteLine(Sanjana.firstName);
+//            Console.WriteLine(Sanjana.lastName);
+//            Console.WriteLine(Sanjana.standard);
+//            Sanjana.printFullName();
+
+//            // Console.WriteLine(Sushil.rollNo + " " + Sanjana.rollNo);
+//            Console.ReadLine();
+//        }
+//    }
+//}
