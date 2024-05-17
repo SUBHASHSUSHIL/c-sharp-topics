@@ -1,0 +1,29 @@
+//Params
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Params_Demo
+{
+    class Program
+    {
+        public static int add(params int[] nums)  //one function in parameters
+        {
+            int sum = 0;
+
+            foreach (int i in nums)
+            {
+                sum = sum + i;
+            }
+            return sum;
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Program.add(10,30,50,300,20));
+            Console.ReadLine();
+        }
+    }
+}
