@@ -1,0 +1,55 @@
+//Old File Check
+using System;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Create_new_folder
+{
+    internal class Program
+    {
+        private void DirectoryInfo()
+        {
+            DirectoryInfo info = new DirectoryInfo("D:\\DemmoApp\\Demoi");
+            Console.WriteLine("Full Name : " + info.FullName);
+            Console.WriteLine("Name : " + info.Name);
+            Console.WriteLine("Exists : " + info.Exists);
+            Console.WriteLine("Extension : " + info.Extension);
+            Console.WriteLine("CreationTime : " + info.CreationTime);
+            Console.WriteLine("Parent : " + info.Parent);
+            Console.WriteLine("Attributes : " + info.Attributes);
+        }
+
+        private void Dir_Files()
+        {
+            DirectoryInfo Dinfo = new DirectoryInfo("D:\\DemmoApp");
+            FileInfo[] files = Dinfo.GetFiles();
+            foreach(FileInfo info in files)
+            {
+                Console.WriteLine("Full Name : " + info.FullName);
+                Console.WriteLine("Name : " + info.Name);
+                Console.WriteLine("Exists : " + info.Exists);
+                Console.WriteLine("Extension : " + info.Extension);
+                Console.WriteLine("CreationTime : " + info.CreationTime);
+                Console.WriteLine("Length : " + info.Length);
+                Console.WriteLine("Attributes : " + info.Attributes);
+
+                Console.WriteLine("Attributes : " + info.DirectoryName);
+
+                Console.WriteLine("Attributes : " + info.LastAccessTime);
+
+
+
+            }
+
+        }
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            program.DirectoryInfo();
+            program.Dir_Files();
+            Console.ReadLine();
+        }
+    }
+}
