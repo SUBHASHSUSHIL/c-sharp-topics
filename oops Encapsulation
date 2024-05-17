@@ -1,0 +1,86 @@
+//2.ENCAPSULATION:->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ENCAPSULATION
+{
+    class Person
+    {
+        public string Name;
+        public int Age;
+
+        public void setName(string Name)
+        {
+            if(string.IsNullOrEmpty(Name) == true)
+            {
+                Console.WriteLine("Name is required.");
+            }
+            else
+            {
+                this.Name = Name;
+            }
+                    
+
+            
+            this.Name = Name;
+        }
+        public void getName()
+        {
+            if (string.IsNullOrEmpty(this.Name) == true)
+            {
+            }
+            else
+            {
+                Console.WriteLine("Your name is:" + this.Name);
+
+            }
+
+        }
+        public void setAge(int Age) //set = setter
+        { 
+            if(Age > 0)
+            {
+                this.Age = Age;
+
+            }
+            else
+            {
+                Console.WriteLine("Age should not be negative or zero..!!");
+            }
+                
+
+            
+        }
+        public void getAge() //get = getter
+        {
+            if(Age > 0)
+            {
+                Console.WriteLine("Your age is:" + this.Age);
+            }
+            else
+            {
+
+            }
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Person P = new Person();
+            P.setName("Sushil");
+            P.getName();
+            P.setAge(22);
+            P.getAge();
+            // P.Name = "";
+            //P.Age = -22;
+            //Console.WriteLine(P.Name);
+            //Console.WriteLine(P.Age);
+            Console.ReadLine();
+
+        }
+    }
+}
