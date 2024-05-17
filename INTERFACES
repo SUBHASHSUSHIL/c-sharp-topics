@@ -1,0 +1,33 @@
+//Interfaces
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace INTERFACES
+{
+    interface IEmployee
+    {
+        void show();
+    }
+
+    class PartTimeEmployees : IEmployee
+    {
+        public void show()
+        {
+            Console.WriteLine("This is a method of IEmployee interface !!");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            PartTimeEmployees sss = new PartTimeEmployees();
+            sss.show();
+            Console.ReadLine();
+
+        }
+    }
+}
