@@ -1,0 +1,48 @@
+3.Inheritance:->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace INHERITANCE_CSHARP
+{
+    class VisitingEmployees : Employees
+    {
+        public int VisitingSalary;
+        public int VisitingHours;
+    }
+    class PermanentEmployees : Employees
+    {
+        public int PermanentSalary;
+        public int PermanentHours;
+    }
+    class Employees
+    {
+        public int EmpId;
+        public int EmpName;
+        public int EmpAge;
+        public int EmpContactNo;
+
+        public void show()
+        {
+            Console.WriteLine("This is a method of base class !!");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            PermanentEmployees Sushil = new PermanentEmployees();
+            Sushil.EmpId = 20;
+            Sushil.show();
+
+            VisitingEmployees Sanjana = new VisitingEmployees();
+            Sanjana.EmpId = 25;
+
+            Console.WriteLine(Sushil.EmpId);
+            Console.WriteLine(Sanjana.EmpId);
+            Console.ReadLine();
+        }
+    }
+}
