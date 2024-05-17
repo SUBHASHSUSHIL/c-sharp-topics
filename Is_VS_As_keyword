@@ -1,0 +1,33 @@
+//Is_VS_As_keyword
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Is_VS_As_keyword
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            object a = "Sushil";
+            string str = a as string;
+            Console.WriteLine(str);
+            //object a = "Sushil";
+            //if(a is string)
+            //{
+            //    Console.WriteLine("Yes Its a String");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No Its Not a String");
+            //}
+
+            //bool check = a is string;
+            //Console.WriteLine(check);
+            Console.ReadLine();
+        }
+    }
+}
