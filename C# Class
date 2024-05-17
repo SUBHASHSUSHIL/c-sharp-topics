@@ -1,0 +1,229 @@
+=>There are Four Types of C# Class.
+1.Abstract Class
+2.Partial Class
+3.Static Class
+4.Sealed Class
+
+//1.Abstract Class
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ABSTRACT_CLASS
+{
+    abstract class person
+    {
+        public string FirstName;
+        public string LastName;
+        public int age;
+        public long PhoneNumber;
+
+        public abstract void PrintDetails();
+    }
+
+    class student : person
+    {
+        public int RollNo;
+        public int Fees;
+
+        public override void PrintDetails()
+        {
+            string name = this.FirstName + " " + this.LastName;
+            Console.WriteLine("Student Name Is: {0}", name);
+            Console.WriteLine("Student age Is: {0}", this.age);
+            Console.WriteLine("Student PhoneNumber Is: {0}", this.PhoneNumber);
+            Console.WriteLine("Student Roll No Is: {0}", this.RollNo);
+            Console.WriteLine("Student Fees Is: {0}", this.Fees);
+        }
+
+    }
+    class teacher : person
+    {
+        public string qualification;
+        public int salary;
+
+        public override void PrintDetails()
+        {
+            string name = this.FirstName + " " + this.LastName;
+            Console.WriteLine("Teacher Name Is: {0}", name);
+            Console.WriteLine("Teacher age Is: {0}", this.age);
+            Console.WriteLine("Teacher PhoneNumber Is: {0}", this.PhoneNumber);
+            Console.WriteLine("Teacher qualification  Is: {0}", this.qualification);
+            Console.WriteLine("Teacher salary Is: {0}", this.salary);
+
+
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            student Sushil = new student();
+            Sushil.FirstName = "Sushil";
+            Sushil.LastName = "Sanjana";
+            Sushil.age = 22;
+            Sushil.PhoneNumber = 6201941071;
+            Sushil.RollNo = 326792;
+            Sushil.Fees = 24000;
+            Sushil.PrintDetails();
+            Console.WriteLine("-------------------");
+
+            teacher Subhash = new teacher();
+            Subhash.FirstName = "Subhash";
+            Subhash.LastName = "Thakur";
+            Subhash.age = 22;
+            Subhash.PhoneNumber = 6201941071;
+            Subhash.qualification = "M.Sc";
+            Subhash.salary = 24000;
+            Subhash.PrintDetails();
+
+            Console.ReadLine();
+        }
+    }
+}
+
+//2.Partial Class
+1.First Class
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Partial_Class_Demo
+{
+    public partial class Studentpartial
+    {
+        private string _firstName;
+        private string _lastName;
+
+        public string FirstName
+        {
+            set
+            {
+                _firstName = value;
+
+            }
+            get
+            {
+                return _firstName;
+            }
+        }
+
+        public string LastName
+        {
+            set
+            {
+                _lastName = value;
+            }
+            get
+            {
+                return _lastName;
+            }
+        }
+       
+    }
+}
+
+2.Second Class First Class Se Data Pass i Second Class
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Partial_Class_Demo
+{
+    public partial class Studentpartial
+    {
+       
+        public string GetCompleteName()
+        {
+            return _firstName + " " + _lastName;
+        }
+    }
+}
+
+//3.Static Class
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace STATIC_CLASS
+{
+    static class product
+    {
+        public static int ProductId;
+        public static string ProductName;
+        public static int ProductPrice;
+
+        static  product()
+        {
+            ProductId = 111;
+            ProductName = "Guitar";
+            ProductPrice = 5000;
+        }
+        public static void getProductDetails()
+        {
+            Console.WriteLine("Product Id = {0}", ProductId);
+            Console.WriteLine("Product Name = {0}", ProductName);
+            Console.WriteLine("Product Price = {0}", ProductPrice);
+        }
+        public static void getDiscount()
+        {
+            int d_amount = ProductPrice / 10;
+            Console.WriteLine("your discount amount is: {0}", d_amount);
+            Console.WriteLine("Total cost of product is: {0}", (ProductPrice - d_amount));
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            product.getProductDetails();
+            product.getDiscount();
+            Console.ReadLine();
+           
+        }
+    }
+}
+
+4.Sealed Class
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sealed_Class
+{
+    sealed class BaseClass
+    {
+        public void Show1()
+        {
+            Console.WriteLine("Method of Base class...");
+        }
+    }
+    class DerevedClass : BaseClass 
+    {
+        public void Show2()
+        {
+            Console.WriteLine("Method of Derived class...");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            DerevedClass dc = new DerevedClass();
+            dc.Show1();
+            
+            Console.ReadLine();
+        }
+    }
+}
+
