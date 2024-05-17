@@ -1,0 +1,59 @@
+//HashTable
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HashTableDemo1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("Id", 1123);
+            ht.Add("Name", "Sushil");
+            ht.Add("Salary", 25000.00);
+            ht.Add("Designation", "Manager");
+            ht.Add("IsMarried", false);
+
+            Console.WriteLine(ht.Count);
+
+            //Console.WriteLine("Sushil".GetHashCode());
+            //Console.WriteLine(ht.Contains("Name"));
+            //foreach (object key in ht.Keys)
+            //{
+            //    Console.WriteLine(key + " : " + ht[key]);
+            //}
+            //Console.WriteLine("----------------------");
+            //ht.Remove("Id");
+            //ht.Clear();
+            //foreach (object key in ht.Keys)
+            //{
+            //    Console.WriteLine(key + " : " + ht[key]);
+            //}
+            Console.ReadLine();
+            //foreach (object key in ht.Keys)
+            //{
+            //    Console.WriteLine(ht[key]);
+            //}
+            //Console.ReadLine();
+            //foreach (object value in ht.Values)
+            //{
+            //    Console.WriteLine(value);
+            //}
+            //Console.ReadLine();
+
+            //ht.Add(100, 1123);
+            //ht.Add(101, "Sushil");
+            //ht.Add(102, 25000.00);
+            //ht.Add(103, "Manager");
+            //ht.Add(104, false);
+            //Console.WriteLine(ht[101]);
+
+        }
+    }
+}
