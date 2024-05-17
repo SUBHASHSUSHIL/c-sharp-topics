@@ -1,0 +1,60 @@
+//Collection
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace COLLECTION
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ArrayList MyList = new ArrayList();
+            Console.WriteLine(MyList.Capacity);
+            MyList.Add(10);
+            Console.WriteLine(MyList.Capacity);
+
+
+            MyList.Add(20);
+            MyList.Add(30);
+            MyList.Add(40);
+            Console.WriteLine(MyList.Capacity);
+            MyList.Add(50);
+            Console.WriteLine(MyList.Capacity);
+
+            foreach (object obj in MyList)
+            {
+                Console.Write(obj + " ");
+            }
+            Console.WriteLine();
+            MyList.Insert(2, 25);
+            foreach (object obj in MyList)
+            {
+                Console.Write(obj + " ");
+            }
+            Console.WriteLine();
+            //MyList.Remove(40);
+            MyList.RemoveAt(4);
+            foreach (object obj in MyList)
+            {
+                Console.Write(obj + " ");
+            }
+
+
+
+            //int[] MyArray = new int[3];
+            //MyArray[0] = 10;
+            //MyArray[1] = 20;
+            //MyArray[2] = 30;
+
+            //Array.Resize(ref MyArray, 4);
+
+            //MyArray[3] = 40;
+            Console.ReadLine();
+
+        }
+    }
+}
