@@ -1,0 +1,55 @@
+//Indexer
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace INDEXERS
+{
+    class Employee
+    {
+        private int[] Age = new int[3];
+
+        public int this[int index]
+        {
+            set
+            {
+                if (index >= 0 && index < Age.Length)
+                {
+
+                if (value < 0)
+                {
+                    Age[index] = value;
+                }
+                else
+                {
+                    Console.WriteLine("value is invalid !!");
+                }
+                else
+                    {
+                        {
+                    Console.WriteLine("Invalid index !!");
+                }
+                    }
+                }
+
+            }
+            get
+            {
+                return Age[index];
+            }
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee emp = new Employee();
+            emp[2] = 5;
+            Console.WriteLine(emp[2]);
+            Console.ReadLine(); 
+        }
+    }
+}
