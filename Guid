@@ -1,0 +1,22 @@
+//GUID
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GUIDInCsharp
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Guid g = Guid.NewGuid();       //GUID use in password generate / Any application use window Application,desktop, .net Application,Any where use
+            // Console.WriteLine(g.ToString().Replace("-",String.Empty) );
+            // Console.WriteLine(g.ToString("N"));
+            Console.WriteLine(g.ToString("N").Substring(0,15));
+            Console.ReadLine();
+        }
+    }
+}
