@@ -1,0 +1,39 @@
+//Try Catch & Finally Block
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FinallyBlockWithTryCatch
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                int a = 10;
+                int b = 0;
+                int c = a / b;
+                Console.WriteLine(c);
+                //string a = null;
+                //Console.WriteLine(a.Length);
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Finally Block Executed..");
+            }
+            Console.ReadLine();
+        }
+    }
+}
