@@ -1,0 +1,41 @@
+//Sealed Method
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SEALED_METHOD
+{
+    class A
+    {
+        public virtual void Print()
+        {
+            Console.WriteLine("This is a method of Class A !!");
+        }
+    }
+    class B : A
+    {
+        public sealed override void Print()
+        {
+            Console.WriteLine("This is a method of Class B !!");
+        }
+    }
+    class C : B
+    {
+        public override void Print()
+        {
+            Console.WriteLine("This is a method of Class C !!");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            C obj = new C();
+            obj.Print();
+            Console.ReadLine();
+        }
+    }
+}
