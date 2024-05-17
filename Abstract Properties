@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Abstract_Properties
+{
+    abstract class person
+    {
+        public abstract int Id { get; set;  }
+        public abstract string Name { get; set;  }
+    }
+
+    class student : person
+    {
+        int StudentId;
+        string StudentName;
+
+        public override int Id
+        {
+            set
+            {
+                if(value == 0)
+                {
+                    Console.WriteLine("Id cannot be Zero !!");
+                }
+                else
+                {
+                    this.StudentId = value;
+
+                }
+            }
+            get
+            {
+                return this.StudentId;
+            }
+        }
+        public override string Name
+        {
+            set
+            {
+                if(string.IsNullOrEmpty(value))
+                {
+                    Console.WriteLine("Name  cannot be null or empty !!");
+                }
+                else
+                {
+                    this.StudentName = value;
+                }
+            }
+            get
+            {
+                return this.StudentName;
+            }
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            student Sushil = new student();
+            Sushil.Id = 22;
+            Sushil.Name = "Sandeep Thakur";
+            Console.WriteLine(Sushil.Id);
+            Console.WriteLine(Sushil.Name);
+            Console.ReadLine();
+
+        }
+    }
+}
