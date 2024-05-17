@@ -1,0 +1,89 @@
+//4.POLYMORPHISM
+=> There are two types of Polymorphism.
+1.Static Polymorphism 
+      =>Method Overloading:->
+                              Multiple methods with the same name but different signatures (different parameters).
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace METHOD_OVERLOADING
+{
+    internal class Program
+    {
+        public void Add()
+        {
+            int a = 30;
+            int b = 40;
+            int c = a + b;
+            Console.WriteLine(c);
+        }
+        public void Add(int a, int b)
+        {
+
+            int c = a + b;
+            Console.WriteLine(c);
+        }
+        public void Add(string a, string b)
+        {
+
+            string c = a + " " + b;
+            Console.WriteLine(c);
+        }
+        public void Add(float a, float b)
+        {
+
+            float c = a + b;
+            Console.WriteLine(c);
+        }
+        static void Main(string[] args)
+        {
+            Program P = new Program();
+            P.Add();
+            P.Add(2.5f, 1.5f);
+            P.Add(10, 5);
+            P.Add("Sushil", "Thakur");
+            Console.ReadLine();
+        }
+    }
+}
+
+2.Dynamic Polymorphism
+                =>Method Overriding:->
+                                      Multiple methods with the same name but same signatures (Inherit in class)->No Parameter
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace METHOD_OVERRIDING
+{
+    class parent
+    {
+        public virtual void print()
+        {
+            Console.WriteLine("this is method of parent class");
+        }
+    }
+    class child : parent
+    {
+        public override void print()
+        {
+            Console.WriteLine("this is method of child class");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            parent p = new child();
+            p.print();
+
+           
+            Console.ReadLine();
+        }
+    }
+}
