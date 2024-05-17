@@ -1,0 +1,36 @@
+//Method Hiding
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace METHOD_HIDING
+{
+    class parent
+    {
+        public void show()
+        {
+            Console.WriteLine("Parent class method");
+        }
+    }
+    class child : parent
+    {
+        public new void show()
+        {
+           // base.show();
+            //  Console.WriteLine("Child class method");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            parent p = new child();
+            p.show();
+           // ((parent)c).show();
+            Console.ReadLine();
+        }
+    }
+}
