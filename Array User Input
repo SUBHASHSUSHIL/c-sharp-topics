@@ -1,0 +1,103 @@
+//Array
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Array_CSHARP
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //int[] my_array = new int[];
+
+            string[] my_array1 = {"sanjay","amit","prakash"};
+
+           // my_array[0] = 01;
+           // my_array[1] = 02;
+
+           // my_array[2] = 03;
+           // my_array[3] = 04;
+           // my_array[4] = 05;
+
+          // Console.WriteLine("sanjay","amit","prakash");
+           //Console.WriteLine("sushil");
+            Console.WriteLine(my_array1[0]);
+            Console.WriteLine(my_array1[1]);
+            Console.WriteLine(my_array1[2]);
+
+            Console.ReadLine();
+        }
+    }
+}
+
+//Array User Type in Data
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Array_Csharp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("how many number of items u want to store in an array??");
+            int num = int.Parse(Console.ReadLine());
+            int[] numbers = new int[num];
+
+            for (int i = 0; i < num; i++)
+            {
+                Console.WriteLine("Enter Data:");
+                int a = int.Parse(Console.ReadLine());
+                
+
+            }
+            Console.WriteLine("-----------Your Data-------------");
+            foreach (int item in numbers)
+            {
+
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+//Number Array
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Arrays_CSHARP
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            decimal[] numbers = new decimal[4];
+            numbers[0] = 0.5;
+            numbers[1] = 77;
+            numbers[2] = 78;
+            numbers[3] = 48;
+
+            foreach (decimal item in numbers) 
+            {
+                Console.WriteLine(item);
+            }
+
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    Console.WriteLine(numbers[]);
+            //}
+
+            Console.ReadLine();
+        }
+    }
+}
