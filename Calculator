@@ -1,0 +1,65 @@
+//Normal Calculator Project
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CALCULATOR_DEMO
+{
+    internal class Program
+    {
+        public static void Addition(int a, int b)
+        {
+            int result = a + b;
+            Console.WriteLine("Addition result is: {0}", result);
+        }
+        public static void Subtraction(int a, int b)
+        {
+            int result = a - b;
+            Console.WriteLine("Subtraction result is: {0}", result);
+        }
+        public static void Multiplication(int a, int b)
+        {
+            int result = a * b;
+            Console.WriteLine("Multiplication result is: {0}", result);
+        }
+        public static void Division(int a, int b)
+        {
+            int result = a / b;
+            Console.WriteLine("Division result is: {0}", result);
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter first number");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            int num2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Operater (+, -, *, /)");
+            string op = Console.ReadLine();
+
+
+            if(op.Equals("+"))
+            {
+                Program.Addition(num1,num2);
+            }
+            else if (op.Equals("-"))
+            {
+                Program.Subtraction(num1, num2);
+            }
+            else if (op.Equals("*"))
+            {
+                Program.Multiplication(num1, num2);
+            }
+            else if (op.Equals("/"))
+            {
+                Program.Division(num1, num2);
+            }
+            else
+            {
+                Console.WriteLine("Invalid Operator !!");
+            }
+            Console.ReadLine();
+        }
+    }
+}
