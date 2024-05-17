@@ -1,0 +1,39 @@
+//DataType Use in C#.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace datatypecsharp
+{
+    internal class Program
+    {
+        public const string company_name = "abc company";
+        static void Main(string[] args)
+        {
+          
+            Console.WriteLine(company_name);
+            Console.ReadLine();
+            //string a = "\"welcom to csharp\"";
+            //char b = 'B';
+            //Console.WriteLine(a);
+            //float a = 23.361554225f;
+            //double b = 123456789.123456789d;
+            //decimal c = 123456789.123456789256459m;
+
+            //Console.WriteLine(a);
+            //Console.WriteLine(b);
+            //Console.WriteLine(c);
+            //int a = 30;
+            //int b = 50;
+
+            //bool c = a > b;
+            //Console.WriteLine(c);
+            //    byte a = 12
+            //Console.WriteLine(int.MaxValue);
+            //Console.WriteLine(int.MinValue);
+            //Console.ReadLine();
+        }
+    }
+}
