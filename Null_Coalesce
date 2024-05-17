@@ -1,0 +1,49 @@
+//Null Coalesce
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Null_Coalesce
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string fruit1 = null;
+            string fruit2 = "Banana";
+            string fruit3 = "Mango";
+            string result = "";
+            if(fruit1 != null)
+            {
+                result = fruit1;
+            }
+            if(fruit2 != null)
+            {
+                result = fruit2;
+            }
+            if(fruit3 != null)
+            {
+                result = fruit3;
+            }
+            Console.WriteLine(result);
+
+            //string result = fruit1 ?? fruit2 ?? fruit3;
+
+
+            //string name = "Sushil";
+            //string result = name ?? "Anonymous";
+            //Console.WriteLine(result);
+
+            //if(name != null)
+            //{
+            //    result = name;
+            //    Console.WriteLine(result);
+
+            //}
+            Console.ReadLine();
+        }
+    }
+}
