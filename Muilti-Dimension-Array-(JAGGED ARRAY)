@@ -1,0 +1,35 @@
+//Muilti-Dimension-Array-(JAGGED ARRAY)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace multi_dimensional_arrays1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //   JAGGED ARRAY
+            int[][] my_array1 = new int[3][];
+            my_array1[0] = new[] { 11, 56, 65, 85,98,96,66,56 };
+            my_array1[1] = new[] { 45, 95, 84, 78,70,41,42, };
+            my_array1[2] = new[] { 85, 78, 71 };
+
+           foreach (int[] items in my_array1)
+           {
+                foreach (int i in items)
+                {
+                    Console.WriteLine(i + " ");
+                }
+
+           }
+            
+            Console.ReadLine();
+
+                
+        }
+    }
+}
