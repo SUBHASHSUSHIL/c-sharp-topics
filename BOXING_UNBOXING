@@ -1,0 +1,24 @@
+//BOXING_UNBOXING
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BOXING_UNBOXING
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1 = 10;     //value type (reference type to value type from implicit conversion)
+            object obj1 = num1;  //implicit conversion from value type to reference type boxing
+            int num2 = (int)obj1; // explicit conversion
+            Console.WriteLine(num2);
+            Console.ReadLine();
+
+
+        }
+    }
+}
